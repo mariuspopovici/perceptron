@@ -12,9 +12,7 @@ const Perceptron = () => {
       wy += dwy;
     });
 
-  const guess = (x, y) => {
-    return wx * x + wy * y >= 1 ? 1 : 0;
-  };
+  const guess = (x, y) => (wx * x + wy * y >= 1 ? 1 : 0);
 
   return {
     train,
