@@ -5,7 +5,6 @@ const getData = async () => {
   return await response.json();
 };
 
-// eslint-disable-next-line no-unused-vars
 const draw = async (canvas, points) => {
   points.forEach(point => drawCircle(canvas, point));
 };
