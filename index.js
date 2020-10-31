@@ -9,11 +9,6 @@ const draw = async (canvas, points) => {
   points.forEach(point => drawCircle(canvas, point));
 };
 
-const canvasClick = args => {
-  const type = args.perceptron.guess(args.x, args.y);
-  drawCircle(args.target, { x: args.x, y: args.y, type }, 10);
-};
-
 const drawCircle = (canvas, point, radius = 5) => {
   const ctx = canvas.getContext('2d');
   ctx.fillStyle = point.type === 1 ? 'rgb(200, 0, 0)' : 'rgb(0, 0, 200)';
@@ -35,12 +30,15 @@ const drawCircle = (canvas, point, radius = 5) => {
   const perceptron = Perceptron();
   perceptron.train(points);
 
-  canvas.addEventListener('click', event => {
-    canvasClick({
-      target: event.currentTarget,
-      x: event.pageX,
-      y: event.pageY,
-      perceptron
-    });
+  canvas.addEventListener('click', e => {
+    drawCircle(
+      e.currentTarget,
+      {
+        x: e.pageX,
+        y: e.pageY,
+        type: perceptron.guess(e.pageX, e.pageY)
+      },
+      10
+    );
   });
 })();
