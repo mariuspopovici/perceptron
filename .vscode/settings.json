@@ -1,0 +1,7 @@
+{
+    "editor.tabSize": 2,
+    "editor.mouseWheelZoom": true,
+    "prettier.endOfLine": "lf",
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true
+}

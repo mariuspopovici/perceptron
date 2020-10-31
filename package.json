@@ -1,0 +1,26 @@
+{
+  "name": "startjs",
+  "version": "1.0.0",
+  "description": "Starting point for any Javascript project. Comes with preconfigured linting and formatting (Eslint + Prettier) and more.",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^6.7.2",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-fp": "^2.3.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "mocha": "^6.2.2",
+    "nyc": "^14.1.1",
+    "prettier": "^1.19.1"
+  },
+  "scripts": {
+    "test": "mocha",
+    "lint": "eslint --fix . && echo 'Lint complete.'"
+  },
+  "keywords": [
+    "start",
+    "javascript"
+  ],
+  "author": "Marius Popovici <marius@popovici.net>",
+  "license": "MIT"
+}
