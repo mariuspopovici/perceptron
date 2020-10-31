@@ -2,7 +2,7 @@ const Perceptron = () => {
   let wx = 0;
   let wy = 0;
 
-  const train = points => {
+  const train = points =>
     points.forEach(point => {
       const value = guess(point.x, point.y);
       const error = point.type - value;
@@ -11,7 +11,6 @@ const Perceptron = () => {
       wx += dwx;
       wy += dwy;
     });
-  };
 
   const guess = (x, y) => {
     return wx * x + wy * y >= 1 ? 1 : 0;
