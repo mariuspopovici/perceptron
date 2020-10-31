@@ -8,4 +8,6 @@ Then you must extend the program and make it plot a new dot each time the user c
 
 You’re told to implement a perceptron to determine the color of the new dot, based on the data of known dots (the ones received in the file).
 
+Click [here](https://jsfiddle.net/mariuspopovici/k9o2v1rw/3/) for a quick demo.
+
 ![alt text](/img/fCzO1db3wu.gif 'Title')
